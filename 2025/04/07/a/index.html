@@ -6,18 +6,20 @@
   
   <title>a | ht2ps的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="文本文本文本">
+  <meta name="description" content="这是一个测试博客$$v&#x3D;\omega r$$ 12345678910111213141516171819202122232425262728293031323334353637383940#include &lt;iostream&gt;using namespace std;string a;int q;const int B &#x3D; 131;unsigned long long p[10">
 <meta property="og:type" content="article">
 <meta property="og:title" content="a">
 <meta property="og:url" content="http://example.com/2025/04/07/a/index.html">
 <meta property="og:site_name" content="ht2ps的博客">
-<meta property="og:description" content="文本文本文本">
+<meta property="og:description" content="这是一个测试博客$$v&#x3D;\omega r$$ 12345678910111213141516171819202122232425262728293031323334353637383940#include &lt;iostream&gt;using namespace std;string a;int q;const int B &#x3D; 131;unsigned long long p[10">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/Users/frankfan/Downloads/1.png">
 <meta property="article:published_time" content="2025-04-07T12:40:29.000Z">
-<meta property="article:modified_time" content="2025-04-07T12:40:29.285Z">
+<meta property="article:modified_time" content="2025-04-08T02:14:44.605Z">
 <meta property="article:author" content="ht2ps">
-<meta property="article:tag" content="关键词">
+<meta property="article:tag" content="关键词关键词关键词">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/Users/frankfan/Downloads/1.png">
   
     <link rel="alternate" href="/atom.xml" title="ht2ps的博客" type="application/atom+xml">
   
@@ -50,7 +52,7 @@
       </h1>
       
         <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">小麻我是你爸</a>
+          <a href="/" id="subtitle">记录学习与日常</a>
         </h2>
       
     </div>
@@ -100,7 +102,13 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <p><strong>这是一个测试博客</strong><br>$$<br>v&#x3D;\omega r<br>$$</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line">string a;</span><br><span class="line"><span class="type">int</span> q;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> B = <span class="number">131</span>;</span><br><span class="line"><span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> p[<span class="number">1000010</span>],h[<span class="number">1000010</span>];</span><br><span class="line"><span class="function"><span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> <span class="title">Hash</span><span class="params">(string x,<span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> h[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	h[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>;i &lt;= x.<span class="built_in">size</span>();i++)</span><br><span class="line">		&#123;</span><br><span class="line">			h[i] = h[i - <span class="number">1</span>] * B + x[i - <span class="number">1</span>];</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">return</span> h[x.<span class="built_in">size</span>()];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> <span class="title">subHash</span><span class="params">(<span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> h[],<span class="type">int</span> l,<span class="type">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> h[r] - h[l - <span class="number">1</span>] * p[r - l + <span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	p[<span class="number">0</span>] = <span class="number">1</span>; </span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>;i &lt;= a.<span class="built_in">size</span>();i++)</span><br><span class="line">	&#123;</span><br><span class="line">		p[i] = p[i - <span class="number">1</span>] * B;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; q;</span><br><span class="line">	<span class="built_in">init</span>();</span><br><span class="line">	<span class="built_in">Hash</span>(a,h);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> li = <span class="number">0</span>;li &lt; q;li++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> l,r;</span><br><span class="line">		cin &gt;&gt; l &gt;&gt; r;</span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">subHash</span>(h,l,r) == <span class="built_in">subHash</span>(h,<span class="number">1</span>,r - l + <span class="number">1</span>)) cout &lt;&lt; <span class="string">&quot;Yes\n&quot;</span>;</span><br><span class="line">		<span class="keyword">else</span> cout &lt;&lt; <span class="string">&quot;No\n&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>测试测试测试</p>
+<hr>
+<h2 id="rtrdtrd"><a href="#rtrdtrd" class="headerlink" title="rtrdtrd"></a>rtrdtrd</h2><p>uiyiuyg7<img src="/Users/frankfan/Downloads/1.png"></p>
+
       
     </div>
     <footer class="article-footer">
