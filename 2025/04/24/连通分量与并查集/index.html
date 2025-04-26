@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://h2tps.cc/img/butterfly-icon.png">
 <meta property="article:published_time" content="2025-04-24T09:32:11.000Z">
-<meta property="article:modified_time" content="2025-04-26T04:15:20.139Z">
+<meta property="article:modified_time" content="2025-04-26T04:16:37.221Z">
 <meta property="article:author" content="h2tps">
 <meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
@@ -18,7 +18,7 @@
   "url": "http://h2tps.cc/2025/04/24/%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F%E4%B8%8E%E5%B9%B6%E6%9F%A5%E9%9B%86/",
   "image": "http://h2tps.cc/img/butterfly-icon.png",
   "datePublished": "2025-04-24T09:32:11.000Z",
-  "dateModified": "2025-04-26T04:15:20.139Z",
+  "dateModified": "2025-04-26T04:16:37.221Z",
   "author": [
     {
       "@type": "Person",
@@ -159,9 +159,9 @@
   isHighlightShrink: false,
   isToc: true,
   pageType: 'post'
-}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">h2tps的博客</span></a><a class="nav-page-title" href="/"><span class="site-name">连通分量与并查集</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">连通分量与并查集</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-04-24T09:32:11.000Z" title="发表于 2025-04-24 17:32:11">2025-04-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-04-26T04:15:20.139Z" title="更新于 2025-04-26 12:15:20">2025-04-26</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h3 id="连通分量的定义"><a href="#连通分量的定义" class="headerlink" title="连通分量的定义"></a>连通分量的定义</h3><p>在点集V，边集E的无向图 G 中选取部分段 V’ 和部分边 E’（V’ ⊆ V, E’ ⊆ E）组成的图 G’ 是原图的<strong>子图（Subgraph）</strong>,特殊地<strong>一个子图也是自己的子图</strong>。</p>
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">h2tps的博客</span></a><a class="nav-page-title" href="/"><span class="site-name">连通分量与并查集</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">连通分量与并查集</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-04-24T09:32:11.000Z" title="发表于 2025-04-24 17:32:11">2025-04-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-04-26T04:16:37.221Z" title="更新于 2025-04-26 12:16:37">2025-04-26</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h3 id="连通分量的定义"><a href="#连通分量的定义" class="headerlink" title="连通分量的定义"></a>连通分量的定义</h3><p>在点集V，边集E的无向图 G 中选取部分段 V’ 和部分边 E’（V’ ⊆ V, E’ ⊆ E）组成的图 G’ 是原图的<strong>子图（Subgraph）</strong>,特殊地<strong>一个子图也是自己的子图</strong>。</p>
 <p>若一个字图具有连通性，则称其为<strong>连通子图（Connected Component）</strong>。</p>
-<p>若一个图没有其他连通子图包含一个子图 G’ ，那么该字图 G’ 是原图的一个<strong>极大连通子图（连通分量、连通块）（Maximal Connected Subgraph）</strong>。<em>可以把连通分量理解成一个图中其他“岛屿”互不相连的“岛屿” ，“岛屿”的数量就是连通分量的数量</em>。</p>
+<p>若一个图没有其他连通子图包含一个子图 G’ ，那么该字图 G’ 是原图的一个<strong>极大连通子图（连通分量、连通块）（Maximal Connected Subgraph）</strong>。<em>可以把连通分量理解成一个图中其他“岛屿”互不相连的“岛屿” ，“岛屿”的数量就是连通分量的数量</em>。..s</p>
 
 
 
